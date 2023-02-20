@@ -6,7 +6,7 @@ import microsoftLogo from "public/images/logos/microsoft.svg";
 import teslaLogo from "public/images/logos/tesla.svg";
 import twitterLogo from "public/images/logos/twitter.svg";
 import facebookLogo from "public/images/logos/facebook.svg";
-import ibmLogo from "public/images/logos/ibm.svg";
+import ibmLogo from "public/images/logos/IBM.svg";
 
 const portfolioCompanies = [
   {
