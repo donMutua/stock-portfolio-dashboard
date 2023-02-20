@@ -61,10 +61,8 @@ function StockCard({ name, symbol, logo }: StockCardProps) {
             </div>
           </div>
 
-          <div>
-            <p className={`text-white text-sm ${colorClass}`}>
-              {changePercent}%
-            </p>
+          <div className="text-white text-sm">
+            <p className={colorClass}>{changePercent}%</p>
           </div>
         </div>
       )}
