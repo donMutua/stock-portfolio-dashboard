@@ -41,13 +41,15 @@ const getSelected = (selectedValue: string) => {
 };
 
 function SelectComponet() {
-  const { dispatch, isLoading, error } = useContext(StockContext);
+  const { dispatch, isLoading } = useContext(StockContext);
+  const [selected, setSelected] = React.useState(options[0].value);
 
   if (isLoading) {
     return <Loader />;
   }
 
   const handleChange = (selectedValue: string) => {
+    setSelected(selectedValue);
     dispatch({ type: "SET_DATA_SERIES", payload: selectedValue });
     dispatch({
       type: "SET_TIME_SERIES",
@@ -57,7 +59,7 @@ function SelectComponet() {
 
   return (
     <Select.Root
-      defaultValue={options[0].value}
+      defaultValue={selected}
       onValueChange={(value) => handleChange(value)}
     >
       <Select.Trigger
